@@ -36,7 +36,6 @@ st.markdown("<h1 style='text-align: center; color: grey;'>⚡Dashboard Alliander
 st.markdown("<h4 style='text-align: center; color: grey;'>Opdracht uitgevoerd door: Dinand Kruger, Thijs van den Berg en Thomas van Meerveld</h4>", unsafe_allow_html=True)
 
 #import datasets
-long_lat = pd.read_excel('locaties.xlsx')
 measurements  = pd.read_csv('measurements_2.csv')
 
 
