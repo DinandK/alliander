@@ -62,8 +62,6 @@ if selected == "Data":
 
     with col3:
         st.write("")
-    #sidebar
-    _id = st.sidebar.slider('test', 1 , 231, 10)
 
 #Page two
 if selected == "Map":
