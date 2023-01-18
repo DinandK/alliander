@@ -35,6 +35,7 @@ st.markdown("<h4 style='text-align: center; color: grey;'>Opdracht uitgevoerd do
 
 #import datasets
 measurements  = pd.read_csv('measurements_2.csv')
+names = pd.read_csv('names.csv')
 
 
 # Nav bar 
