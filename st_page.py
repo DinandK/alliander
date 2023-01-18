@@ -11,8 +11,6 @@ from PIL import Image
 
 
 #loading plots
-with open('index.html') as source1:
-    design1 = source1.read()
 with open('24uuranalyse.html') as source2:
     design2 = source2.read()
 with open('averages1to247.html') as source3:
