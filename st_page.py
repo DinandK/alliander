@@ -89,6 +89,6 @@ if selected == "Map":
         plt.ylabel('Verbruik [KWH]')
         st.pyplot(fig)
     with col3:
-        st.write(''))
+        st.write('')
 
 
