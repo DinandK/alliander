@@ -75,18 +75,20 @@ if selected == "Map":
         st.write('')
     with col2:
         fig = plt.figure(figsize=(10, 4))
-        sns.lineplot(x = 'Dag van de Week', y = input1, data = measurements).set(title='Verbruik [KWH] per dag van de week')
+        sns.lineplot(x = 'Uur', y = input1, data = measurements, color="purple").set(title='Verbruik [KWH] per uur')
         plt.ylabel('Verbruik [KWH]')
         st.pyplot(fig)
-        fig = plt.figure(figsize=(10, 4))
-        sns.lineplot(x = 'Dag van de Maand', y = input1, data = measurements).set(title='Verbruik [KWH] per dag van de maand')
+        fig, ax = plt.subplots(figsize=(10, 4))
+        sns.lineplot(x = 'Dag van de Week', y = input1, data = measurements, color="purple").set(title='Verbruik [KWH] per dag van de week')
         plt.ylabel('Verbruik [KWH]')
+        plt.xticks([0,1,2,3,4,5,6])
+        ax.set_xticklabels(['Maa','Din','Woe','Don','Vri','Zat','Zon'])
         st.pyplot(fig)
         fig = plt.figure(figsize=(10, 4))
-        sns.lineplot(x = 'Uur', y = input1, data = measurements).set(title='Verbruik [KWH] per uur')
+        sns.lineplot(x = 'Dag van de Maand', y = input1, data = measurements, color="purple").set(title='Verbruik [KWH] per dag van de maand')
         plt.ylabel('Verbruik [KWH]')
         st.pyplot(fig)
     with col3:
-        st.write('')
+        st.write(''))
 
 
