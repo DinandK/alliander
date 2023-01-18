@@ -64,15 +64,15 @@ if selected == "Data":
 #Page two
 if selected == "Map":
     components.iframe("https://lemon-smoke-0c2fad103.2.azurestaticapps.net/",height= 800)
-    input1 = st.text_input('Voer het ID in van uw middenspanningsruimte')
-    if input1 == "":
-        input1 = '1af6b926-ad76-5af7-91a1-aac1f3fa6e31'
     
     col1, col2, col3 = st.columns([4,8,4])
     with col1:
         st.write('')
     with col2:
         fig = plt.figure(figsize=(10, 4))
+        input1 = st.selectbox('Selecteer het ID in van uw middenspanningsruimte', names.names)
+        if input1 == "":
+            input1 = '1af6b926-ad76-5af7-91a1-aac1f3fa6e31'
         sns.lineplot(x = 'Uur', y = input1, data = measurements, color="purple").set(title='Verbruik [KWH] per uur')
         plt.ylabel('Verbruik [KWH]')
         st.pyplot(fig)
